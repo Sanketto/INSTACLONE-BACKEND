@@ -1,6 +1,6 @@
 const dbConfig = require("../config/db");
 const Post = require("../module/Post")
-const {deleteFile} = require("./upload")
+
 
 
 const getPosts = async (req, res) => {
@@ -58,7 +58,7 @@ const deletePost = async (req, res)=>{
 
  Post.findByIdAndRemove({_id: id})
       .then(async(data) => {
-        if (!data || !fl) {
+        if (!data) {
           res.status(404).send({
             message: `Cannot delete Post with id=${id}. Maybe Post was not found!`
           });
