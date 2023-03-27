@@ -95,22 +95,22 @@ const getListFiles = async (req, res) => {
 
 
 
-const deleteFile = async (filename) => {
+// const deleteFile = async (filename) => {
  
   
-    console.log("deleteFile");
-      await mongoClient.connect();
-    const database = mongoClient.db(dbConfig.database);
-    const images = database.collection(dbConfig.imgBucket + ".files");
-    const imagesChunk = database.collection(dbConfig.imgBucket + ".chunks");
-    filename = filename.split("/");
-    filename = filename[filename.length-1];
-    console.log(filename);
-    let file = images.deleteOne({filename})
-    console.log(file);
-   return imagesChunk.deleteMany({files_id: file._id})  
+//     console.log("deleteFile");
+//       await mongoClient.connect();
+//     const database = mongoClient.db(dbConfig.database);
+//     const images = database.collection(dbConfig.imgBucket + ".files");
+//     const imagesChunk = database.collection(dbConfig.imgBucket + ".chunks");
+//     filename = filename.split("/");
+//     filename = filename[filename.length-1];
+//     console.log(filename);
+//     let file = images.deleteOne({filename})
+//     console.log(file);
+//    return imagesChunk.deleteMany({files_id: file._id})  
   
-}
+// }
 
 const download = async (req, res) => {
   try {
