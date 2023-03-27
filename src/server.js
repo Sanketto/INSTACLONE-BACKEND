@@ -4,7 +4,7 @@ const app = express();
 const initRoutes = require("./routes");
 
 var corsOptions = {
-  origin: "http://localhost:3000"//REACT APP
+  origin: "https://insta-san.onrender.com"//REACT APP
 };
 
 app.use(cors(corsOptions));
