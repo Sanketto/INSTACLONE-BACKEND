@@ -6,7 +6,7 @@ const GridFSBucket = require("mongodb").GridFSBucket;
 mongoose = require('mongoose')
 const url = dbConfig.url;
 
-const baseUrl = "http://localhost:8080/files/";
+const baseUrl = "https://insta-backend-qv9o.onrender.com/files/";
 mongoose.connect(url+dbConfig.database, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const mongoClient = new MongoClient(url);
